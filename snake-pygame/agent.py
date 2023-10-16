@@ -19,7 +19,6 @@ class Agent:
         self.memory = deque(maxlen=MAX_MEMORY) # popleft()
         self.model = Linear_QNet(11, 256, 3) # can play with the 256(middle number)
         self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)
-        # TODO: model, trainer
 
     def get_state(self, game):
         head = game.snake[0]
